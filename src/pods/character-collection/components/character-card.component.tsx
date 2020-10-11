@@ -10,7 +10,7 @@ import Avatar from '@material-ui/core/Avatar/Avatar';
 import IconButton from '@material-ui/core/IconButton/IconButton';
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
-import { CharacterEntityVm } from '../hotel-collection.vm';
+import { CharacterEntityVm } from '../character-collection.vm';
 import * as classes from './character-card.styles';
 
 interface Props {

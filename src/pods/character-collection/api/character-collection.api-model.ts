@@ -13,12 +13,12 @@ export interface CharacterEntityApi {
   created: string
 }
 
-interface Origin {
+export interface Origin {
   name: string,
   url: string,
 }
 
-interface CharacterLocation {
+export interface CharacterLocation {
   name: string,
   url: string
 }

@@ -1,17 +1,37 @@
-export interface Hotel {
-  id: string;
-  name: string;
-  description: string;
-  rating: number;
-  address: string;
-  city: string;
+import { Origin, CharacterLocation } from "pods/character-collection/api";
+
+export interface Character {
+  id: number;
+  name: string,
+  status: string,
+  species: string,
+  type: string,
+  gender: string,
+  origin: Origin,
+  location: CharacterLocation,
+  image: string,
+  episode: string[],
+  url: string,
+  created: string
 }
 
-export const createEmptyHotel = (): Hotel => ({
-  id: '',
+export const createEmptyCharacter = (): Character => ({
+  id: undefined,
   name: '',
-  description: '',
-  rating: 3,
-  address: '',
-  city: '',
+  status: '',
+  species: '',
+  type: '',
+  gender: '',
+  origin: {
+    name: '',
+    url: ''
+  },
+  location: {
+    name: '',
+    url: ''
+  },
+  image: '',
+  episode: [],
+  url: '',
+  created: '',
 });

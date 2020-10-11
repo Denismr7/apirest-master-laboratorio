@@ -1,15 +1,14 @@
-import { Hotel } from './hotel.api-model';
 import { Lookup } from 'common/models';
-import { mockCities, mockHotelCollection } from './hotel.mock-data';
+import { CharacterEntityApi } from 'pods/character-collection/api';
 
-export const getHotel = async (id: string): Promise<Hotel> => {
-  return mockHotelCollection.find((h) => h.id === id);
+const baseUrl = 'https://rickandmortyapi.com/api/character';
+
+export const getCharacter = async (id: number): Promise<CharacterEntityApi> => {
+  const characterUrl = `${baseUrl}/${id}`;
+  const character: Promise<CharacterEntityApi> = await fetch(characterUrl).then(rsp => rsp.json()).then(data => data).catch(e => console.log(e));
+  return character;
 };
 
-export const getCities = async (): Promise<Lookup[]> => {
-  return mockCities;
-};
-
-export const saveHotel = async (hotel: Hotel): Promise<boolean> => {
+export const saveCharacter = async (character: CharacterEntityApi): Promise<boolean> => {
   return true;
 };
