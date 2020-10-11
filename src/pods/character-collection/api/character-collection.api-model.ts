@@ -1,16 +1,15 @@
 export interface CharacterEntityApi {
   id: number,
   name: string,
-  status: string,
-  species: string,
-  type: string,
-  gender: string,
-  origin: Origin,
-  location: CharacterLocation,
-  image: string,
-  episode: string[],
-  url: string,
-  created: string
+  country: string,
+  comment: string,
+  gender: string
+}
+
+export interface ApiResponse {
+  api: {
+    characters: CharacterEntityApi[]
+  }
 }
 
 export interface Origin {

@@ -7,16 +7,9 @@ export const mapCharacterFromApiToVm = (
   ...character,
   id: character.id,
   name: character.name,
-  status: character.status,
-  species: character.species,
-  type: character.type,
+  country: character.country,
   gender: character.gender,
-  origin: character.origin,
-  location: character.location,
-  image: character.image,
-  episode: character.episode,
-  url: character.url,
-  created: character.created
+  comment: character.comment
 });
 
 export const mapCharacterFromVmToApi = (character: viewModel.Character): CharacterEntityApi =>
@@ -24,14 +17,7 @@ export const mapCharacterFromVmToApi = (character: viewModel.Character): Charact
     ...character,
     id: character.id,
     name: character.name,
-    status: character.status,
-    species: character.species,
-    type: character.type,
+    country: character.country,
     gender: character.gender,
-    origin: character.origin,
-    location: character.location,
-    image: character.image,
-    episode: character.episode,
-    url: character.url,
-    created: character.created
+    comment: character.comment
   } as unknown) as CharacterEntityApi);

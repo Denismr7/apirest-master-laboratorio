@@ -27,17 +27,17 @@ export const CharacterCard: React.FunctionComponent<Props> = (props) => {
       <CardHeader
         avatar={<Avatar aria-label="Hotel">{character.id}</Avatar>}
         title={character.name}
-        subheader={character.status}
+        subheader={character.country}
       />
       <CardContent>
         <div className={classes.content}>
           <CardMedia
-            image={character.image}
+            image={"https://via.placeholder.com/650x250.png?text=No+Picture+Avalaible"}
             title={character.name}
             style={{ height: 0, paddingTop: '56.25%' }}
           />
           <Typography variant="subtitle1" gutterBottom>
-            {character.type}
+            {character.gender}
           </Typography>
         </div>
       </CardContent>

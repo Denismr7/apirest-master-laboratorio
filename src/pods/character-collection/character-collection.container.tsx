@@ -6,7 +6,7 @@ import { useCharacterCollection } from './character-collection.hook';
 import { CharacterCollectionComponent } from './character-collection.component';
 
 export const CharacterCollectionContainer = () => {
-  const { characterCollection: hotelCollection, loadCharacterCollection: loadCharacterCollection } = useCharacterCollection();
+  const { characterCollection: characterCollection, loadCharacterCollection: loadCharacterCollection } = useCharacterCollection();
   const history = useHistory();
 
   React.useEffect(() => {
@@ -28,7 +28,7 @@ export const CharacterCollectionContainer = () => {
 
   return (
     <CharacterCollectionComponent
-      characterCollection={hotelCollection}
+      characterCollection={characterCollection}
       onCreateCharacter={handleCreateCharacter}
       onEdit={handleEdit}
       onDelete={handleDelete}

@@ -32,5 +32,11 @@ export const HotelContainer: React.FunctionComponent = (props) => {
     }
   };
 
-  return <HotelComponent character={character} onSave={handleSave} />;
+  const handleChange = (event) => {
+    if (event.target.name === "name") setCharacter({...character, name : event.target.value});
+    if (event.target.name === "country") setCharacter({...character, country : event.target.value});
+    if (event.target.name === "comment") setCharacter({...character, comment : event.target.value});
+  }
+
+  return <HotelComponent character={character} onSave={handleSave} onChange={handleChange}/>;
 };
